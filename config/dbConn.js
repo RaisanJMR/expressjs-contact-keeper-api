@@ -5,9 +5,9 @@ const connectDB = async () => {
     mongoose.set('strictQuery', false)
     const connect = await mongoose.connect(process.env.CONNECTION_STRING)
     console.log(
-      'DB connected'.brightMagenta,
-      connect.connection.host.brightCyan,
-      connect.connection.name.brightBlue
+      'DB connected:'.bgCyan,
+      connect.connection.host.bgCyan,
+      connect.connection.name.bgCyan
     )
   } catch (error) {
     console.log(error)
